@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="inbox">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="direct">
+          <h5>Direct</h5>
+          <a class="compose" href="{{ url_for('inbox') }}"><img src="../static/compose.png" width="35px"></a>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <img class="send" src="../static/send1.jpg" width="130px" alt="">
+        <h4>Your Messages</h4>
+        <p>Send private photos and messages to a friend or group.</p>
+        <a class="btn btn-info send-btn" href="#">Send Message</a>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

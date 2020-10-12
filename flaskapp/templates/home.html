@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row">
+  <div class="col-md-8">
+
+    {%for post in posts.items %}
+    <article class="">
+      <div class="top">
+        <a href="{{ url_for('profile') }}"><img class="rounded-circle post_dp" src="../static/dp.jpg" width="45px"></a>
+        <a href="{{ url_for('profile') }}"><span>{{ post.author.username }}</span></a>
+      </div>
+      <a href="{{ url_for('post', post_id=post.id) }}"><img class="post_img" src="../static/post1.jpg" alt=""></a>
+      <div class="bottom">
+        <a href="{{ url_for('notifications') }}"><img class="post_actions" src="../static/heart.png" height="30px"></a>
+        <a href="{{ url_for('notifications') }}"><img class="post_actions" src="../static/comment.png" height="30px"></a>
+        <a href="{{ url_for('home') }}"><img class="post_actions" src="../static/send.png" width="26px"></a>
+        <a href="{{ url_for('notifications') }}"><img class="post_save" src="../static/save.png" height="32px" width="40px"></a>
+      </div>
+      <div class="likes">
+        <strong>210 likes</strong><br>
+        <a href="{{ url_for('profile') }}"><span>{{ post.author.username }}</span></a><text>{{ post.caption }}</text>
+      </div>
+    </article>
+    {% endfor %}
+
+  </div>
+
+  <div class="col-md-4">
+    <div class="right d-none d-xl-block">
+      <a href="{{ url_for('home') }}"><img class="rounded-circle post_dp" src="../static/dp.jpg" width="65px"></a>
+      <strong>{{ current_user.username }}</strong>
+      <small>{{ current_user.full_name }}</small>
+    </div>
+  </div>
+
+</div>
+{% endblock content %}

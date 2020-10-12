@@ -1,0 +1,495 @@
+body {
+  background-color: #fafafa !important;
+  color: #333333;
+  padding-top: 80px;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+.navbar-brand {
+  font-family: 'Cookie', cursive;
+  font-size: 30px;
+  padding: 0;
+}
+
+.bg-steel {
+  background-color: #fff;
+  border: 0.5px solid #ccc;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+
+stom scrollbarCSS By David on Mar 6 2020
+::-webkit-scrollbar              { /* 1 */ }
+::-webkit-scrollbar-button       { /* 2 */ }
+::-webkit-scrollbar-track        { /* 3 */ }
+::-webkit-scrollbar-track-piece  { /* 4 */ }
+::-webkit-scrollbar-thumb        { /* 5 */ }
+::-webkit-scrollbar-corner       { /* 6 */ }
+::-webkit-resizer                { /* 7 */ }
+
+
+/* Different States */
+:horizontal
+:vertical
+:decrement
+:increment
+:start
+:end
+:double-button
+:single-button
+:no-button
+:corner-present
+:window-inactive
+
+
+/* All toghether example */
+::-webkit-scrollbar-track-piece:start {
+   /* Select the top half (or left half) or scrollbar track individually */
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+   /* Select the thumb when the browser window isn't in focus */
+}
+
+::-webkit-scrollbar-button:horizontal:decrement:hover {
+   /* Select the down or left scroll button when it's being hovered by the mouse */
+}
+
+
+/* Example */
+body::-webkit-scrollbar {
+    width: 0.7em;
+}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 50px;
+}
+
+.navbar-nav img {
+  margin-right: 10px;
+}
+
+.search {
+  font-size: 15px;
+  height: 30px;
+  background: #f3f3f3;
+  border-radius: 2px;
+}
+
+/*////////////////////////////////////// HOME PAGE ///////////////////////////////////*/
+
+.container {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+article {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 50px;
+  /* box-shadow: 0 0 20px #ccc; */
+}
+
+article .post_img {
+  width: 100%;
+}
+
+.top {
+  height: 70px;
+}
+
+.bottom {
+  height: 55px;
+}
+
+.post_actions {
+  margin: 11px 0px 11px 15px;
+}
+
+.post_dp {
+  margin: 13px 10px 10px 15px;
+}
+
+
+.post_more {
+  float: right;
+  position: relative;
+  right: 20px;
+  top: 16px;
+}
+.post_save {
+  float: right;
+  position: relative;
+  right: 20px;
+  top: 10px;
+}
+.likes{
+  padding-bottom: 20px;
+}
+.likes strong {
+  margin-left: 15px;
+  font-size: 15px;
+}
+.likes span {
+  margin-left: 15px;
+  font-size: 16px;
+  margin-top: 15px;
+  font-weight: 700;
+}
+.likes text {
+  margin-left: 10px;
+}
+
+.right {
+  height: 200px;
+}
+.right small{
+  float: right;
+  position: absolute;
+  top: 53px;
+  right: 133px;
+  color: #999;
+}
+
+.search {
+  margin-left: 200px;
+  width: 200px;
+}
+.top a {
+  color: black;
+}
+.top a:hover {
+  text-decoration: none;
+  color: black;
+}
+.likes a {
+  color: black;
+}
+.likes a:hover {
+  text-decoration: none;
+  color: black;
+}
+/*////////////////////////////////////// NOTIFICATION PAGE ///////////////////////////////////*/
+
+.notifications {
+  padding-left: 130px;
+  padding-right: 130px;
+}
+.activity {
+  height: 75px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+.activity span {
+  font-size: 15px;
+  margin-left: 5px;
+}
+.activity strong {
+  font-weight: 600;
+}
+.activity small {
+  margin-left: 6px;
+  font-size: 16px;
+  color: #999;
+}
+.noti-img {
+  float: right;
+  position: relative;
+  right: 0px;
+  top: 5px;
+}
+
+/*////////////////////////////////////// INBOX PAGE ///////////////////////////////////*/
+
+.inbox {
+  height: 700px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.inbox .row {
+  height: 700px;
+}
+.inbox .col-md-7 {
+  border-left: 1px solid #ccc;
+}
+.inbox .col-md-5 {
+  padding-right: 0px;
+}
+.inbox .direct {
+  height: 70px;
+  padding: 22px;
+  border-bottom: 1px solid #ccc;
+}
+.inbox .direct h5 {
+  text-align: center;
+}
+.compose {
+  float: right;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.inbox .send {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 250px;
+}
+.inbox h4 {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.inbox p {
+  text-align: center;
+  width: 100%;
+  font-size: 15px;
+}
+.inbox .send-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 25px;
+}
+
+/*////////////////////////////////////// PROFILE PAGE ///////////////////////////////////*/
+
+.profile {
+  padding-left: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.profile img {
+  border: 2px solid #ccc;
+  padding: 5px;
+}
+.profile .col-md-9 {
+  padding: 30px;
+}
+.profile .col-md-9 span{
+  font-size: 30px;
+  font-weight: 300;
+}
+.edit-profile {
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.settings {
+  border: 0px !important;
+  padding: 0px !important;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+.info {
+  margin-top: 10px;
+}
+.info a {
+  margin-right: 30px;
+  color: #444;
+  font-size: 18px;
+
+}
+.bio {
+  padding-top: 15px;
+}
+
+.feed {
+  margin-top: 20px;
+}
+
+/*////////////////////////////////////// LOGIN PAGE ///////////////////////////////////*/
+
+.login {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.form-holder {
+  border: 1px solid #ccc;
+  height: 450px;
+  width: 400px;
+  padding: 20px 50px 20px 50px;
+  background: #fff;
+  box-shadow: 0 0 20px #bbb;
+}
+.logo-font {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+.signup-holder {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  height: 70px;
+  width: 400px;
+  padding-top: 20px;
+  background: #fff;
+  box-shadow: 0 0 20px #bbb;
+}
+.signup-holder p {
+  text-align: center;
+  font-size: 15px;
+}
+.signup-holder a {
+  font-weight: 500;
+}
+.signup-holder a:hover {
+  text-decoration: none;
+}
+.username {
+  margin-bottom: 10px;
+  font-size: 14px;
+  background: #fafafa;
+  border-radius: 2px;
+  height: 40px;
+}
+.password {
+  font-size: 14px;
+  background: #fafafa;
+  border-radius: 2px;
+  height: 40px;
+  margin-bottom: 18px;
+}
+.login-btn {
+  width: 100%;
+  line-height: 19px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+.forgot-pass {
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+  color: black;
+}
+.forgot-pass:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.download-app {
+  padding-top: 20px;
+  width: 400px;
+}
+.download-app p{
+  font-size: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+.apple {
+  margin-left: 50px;
+}
+
+footer {
+  padding: 100px 250px 0px 250px;
+}
+footer a {
+  color: #00376B;
+  font-weight: 500;
+  font-size: 14px;
+  margin-right: 15px;
+}
+footer span {
+  float: right;
+  font-size: 14px;
+  color: #999;
+  font-weight: 500;
+}
+footer a:hover {
+  text-decoration: none;
+  color: #00376B;
+}
+
+/*////////////////////////////////////// SIGNUP PAGE ///////////////////////////////////*/
+
+.form-holder-signup {
+  border: 1px solid #ccc;
+  height: 610px;
+  width: 400px;
+  padding: 20px 50px 20px 50px;
+  background: #fff;
+  box-shadow: 0 0 20px #bbb;
+}
+
+.form-holder-signup strong {
+  display: block;
+  text-align: center;
+  color: #888;
+  font-weight: 600;
+  font-size: 17px;
+}
+.logo-font-signup {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+.facebook-sign {
+  width: 100%;
+}
+.fb-logo {
+  background: #395693;
+  margin-bottom: 2px;
+  margin-right: 5px;
+}
+.facebook-sign {
+  margin-top: 15px;
+  line-height: 20px;
+  background-color: #395693;
+}
+.or-signup {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+.form-holder-signup p {
+  font-size: 14px;
+  color: #757575;
+  text-align: center;
+}
+
+/*////////////////////////////////////// CREATE POST PAGE ///////////////////////////////////*/
+
+.create_post {
+  border: 1px solid #ccc;
+  background: #fff;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+.create_post h3 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.caption {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

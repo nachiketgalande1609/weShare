@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row">
+  <div class="col-md-8">
+    <article class="">
+      <div class="top">
+        <a href="{{ url_for('profile') }}"><img class="rounded-circle post_dp" src="../static/dp.jpg" width="45px"></a>
+        <a href="{{ url_for('profile') }}"><strong>{{ post.author.username }}</strong></a>
+
+        <div class="dropdown post_more">
+          <a class="nav-item nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../static/more.png" width="20px"></a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            {% if post.author == current_user %}
+            <a class="dropdown-item" href="{{ url_for('profile') }}">Edit</a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#deleteModal">Delete</a>
+            {% endif %}
+          </div>
+        </div>
+
+      </div>
+      <img class="post_img" src="../static/post1.jpg" alt="">
+      <div class="bottom">
+        <a href="{{ url_for('notifications') }}"><img class="post_actions" src="../static/heart.png" height="30px"></a>
+        <a href="{{ url_for('notifications') }}"><img class="post_actions" src="../static/comment.png" height="30px"></a>
+        <a href="{{ url_for('home') }}"><img class="post_actions" src="../static/send.png" width="26px"></a>
+        <a href="{{ url_for('notifications') }}"><img class="post_save" src="../static/save.png" height="32px" width="40px"></a>
+      </div>
+      <div class="likes">
+        <strong>210 likes</strong><br>
+        <a href="{{ url_for('profile') }}"><span>{{ post.author.username }}</span></a><text>{{ post.caption }}</text>
+      </div>
+    </article>
+  </div>
+
+  <div class="col-md-4">
+    <div class="right d-none d-xl-block">
+      <a href="{{ url_for('home') }}"><img class="rounded-circle post_dp" src="../static/dp.jpg" width="65px"></a>
+      <strong>{{ current_user.username }}</strong>
+      <small>{{ current_user.full_name }}</small>
+    </div>
+  </div>
+
+</div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Delete Post?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <form action="{{ url_for('delete_post', post_id=post.id) }}" method="POST">
+            <input class="btn btn-danger" type="submit" value="Delete">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

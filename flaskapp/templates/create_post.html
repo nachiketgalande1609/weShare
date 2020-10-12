@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="create_post">
+    <h3>Add Post</h3>
+    <form method="POST" action="">
+      {{ form.hidden_tag() }}
+      <div class="active-cyan-4">
+        {{ form.caption(class="form-control caption", placeholder="Caption") }}
+      </div>
+      {{ form.submit(class="btn btn-success login-btn") }}
+    </form>
+  </div>
+{% endblock content %}
